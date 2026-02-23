@@ -1,0 +1,41 @@
+:root {
+    --primary: #49e619;
+    --dark: #152111;
+    --border: #eaf3e7;
+}
+
+body { font-family: 'Lexend', sans-serif; }
+
+/* Layout */
+.main-layout { display: grid; grid-template-columns: 260px 1fr; height: 100vh; }
+.sidebar { background: var(--dark); display: flex; flex-direction: column; padding: 1.5rem; }
+.side-header { display: flex; align-items: center; gap: 12px; margin-bottom: 2rem; }
+.logo-box { width: 32px; height: 32px; background: var(--primary); border-radius: 6px; }
+
+.nav-btn {
+    width: 100%; display: flex; align-items: center; gap: 12px;
+    padding: 0.8rem 1rem; color: #a3b19c; border-radius: 10px;
+    margin-bottom: 0.5rem; transition: 0.3s; font-size: 0.9rem;
+}
+.nav-btn:hover, .nav-btn.active { background: #ffffff10; color: var(--primary); }
+.nav-btn.active { font-weight: bold; background: #ffffff15; }
+
+/* Content */
+.content-viewport { overflow-y: auto; }
+.top-nav { background: white; padding: 1rem 2rem; display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); }
+.search-container { background: #f0f4f0; padding: 0.5rem 1rem; border-radius: 8px; display: flex; align-items: center; gap: 8px; width: 300px; }
+.search-container input { background: transparent; border: none; outline: none; font-size: 0.8rem; width: 100%; }
+.profile-circle { width: 38px; height: 38px; background: #49e61920; color: #39A900; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 1px solid #49e61940; }
+
+/* Cards & Forms */
+.glass-card { background: white; border-radius: 20px; border: 1px solid var(--border); padding: 1.5rem; shadow: 0 4px 20px rgba(0,0,0,0.02); }
+.input-main { background: #f9fcf8; border: 1px solid var(--border); border-radius: 12px; padding: 1rem; font-weight: 800; font-size: 1.5rem; width: 100%; }
+
+/* Toast Notification */
+.toast {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+    background: var(--dark); color: white; padding: 1rem 2rem; border-radius: 50px;
+    display: flex; align-items: center; gap: 12px; z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3); border-bottom: 3px solid var(--primary);
+}
+.hidden { display: none; }

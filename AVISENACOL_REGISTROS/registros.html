@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sena Avícola - Control Integrado</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="ASSETS/CSS/estilo.css">
+</head>
+<body class="bg-[#f6f8f6] text-[#111b0e]">
+
+    <div id="toast" class="toast hidden">
+        <span class="material-symbols-outlined">check_circle</span>
+        <p>Registro subido correctamente</p>
+    </div>
+
+    <section class="main-layout">
+        <aside class="sidebar">
+            <header class="side-header">
+                <div class="logo-box"></div>
+                <div>
+                    <h2 class="text-white font-bold text-sm">Sena Cauca</h2>
+                    <p class="text-primary text-[9px] font-black uppercase">Gestión Avícola</p>
+                </div>
+            </header>
+            <nav class="nav-links">
+                <button onclick="switchTab('dashboard')" class="nav-btn active" id="btn-dashboard">
+                    <span class="material-symbols-outlined">grid_view</span> Dashboard General
+                </button>
+                <button onclick="switchTab('salud')" class="nav-btn" id="btn-salud">
+                    <span class="material-symbols-outlined">monitor_heart</span> Salud y Producción
+                </button>
+                <button onclick="switchTab('inventario')" class="nav-btn">
+                    <span class="material-symbols-outlined">inventory_2</span> Inventario
+                </button>
+            </nav>
+        </aside>
+
+        <main class="content-viewport">
+            <header class="top-nav">
+                <div class="search-container">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" placeholder="Buscar galpón o lote...">
+                </div>
+                <div class="user-info">
+                    <div class="text-right">
+                        <p class="text-xs font-bold">Admin San Juan</p>
+                        <p class="text-[10px] text-gray-400">Supervisor de Planta</p>
+                    </div>
+                    <div class="profile-circle">AS</div>
+                </div>
+            </header>
+
+            <section id="render-area" class="p-8">
+                </section>
+        </main>
+    </section>
+
+    <script src="ASSETS/JS/reg.js"></script>
+</body>
+</html>
