@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Registro Técnico de Producción - RF-NU-016</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#43a800",
+                        "primary-dark": "#007832",
+                        "background-light": "#f7f8f5",
+                        "background-dark": "#17230f",
+                    },
+                    fontFamily: { "display": ["Public Sans"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .modal-active { display: flex !important; }
+        .input-header { @apply w-full bg-transparent border-none p-1 text-sm focus:ring-0 font-semibold; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display text-slate-800 dark:text-slate-100">
+
+    <nav class="bg-white dark:bg-zinc-900 border-b border-primary/10 px-6 py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-2 rounded-lg"><span class="material-icons text-white">analytics</span></div>
+                <div>
+                    <h1 class="text-xl font-bold text-primary-dark dark:text-primary">SISTEMA INTEGRADO DE GESTIÓN</h1>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold">Registro Técnico de producción F009 - AVIC</p>
+                </div>
+            </div>
+            <div class="text-right hidden md:block">
+                <p class="text-[10px] font-black uppercase text-primary">Proceso Unidad Avícola</p>
+                <p class="text-[10px] text-slate-400">Versión 01</p>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
+        
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-slate-300 dark:border-zinc-700 rounded-xl overflow-hidden bg-white dark:bg-zinc-900 shadow-sm">
+            
+            <div class="p-4 border-b md:border-b-0 md:border-r border-slate-300 dark:border-zinc-700 space-y-3">
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-zinc-800 pb-1">
+                    <label class="text-[10px] font-black text-slate-400 uppercase">Galpón N°:</label>
+                    <input type="text" class="text-right font-bold text-primary focus:outline-none w-20 bg-transparent" placeholder="001">
+                </div>
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-zinc-800 pb-1">
+                    <label class="text-[10px] font-black text-slate-400 uppercase">Edad (Semanas):</label>
+                    <input type="number" class="text-right font-bold focus:outline-none w-20 bg-transparent" placeholder="24">
+                </div>
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-zinc-800 pb-1">
+                    <label class="text-[10px] font-black text-slate-400 uppercase">Semana de Prod:</label>
+                    <input type="number" class="text-right font-bold focus:outline-none w-20 bg-transparent" placeholder="4">
+                </div>
+                <div class="flex items-center justify-between">
+                    <label class="text-[10px] font-black text-slate-400 uppercase">Línea:</label>
+                    <select class="text-xs font-bold bg-transparent border-none p-0 focus:ring-0 text-right">
+                        <option>Hy-Line Brown</option>
+                        <option>Lohmann LSL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="p-4 border-b md:border-b-0 md:border-r border-slate-300 dark:border-zinc-700 space-y-3 bg-slate-50/50 dark:bg-zinc-800/20">
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-zinc-800 pb-1">
+                    <label class="text-[10px] font-black text-slate-400 uppercase">Consecutivo:</label>
+                    <span class="text-xs font-mono font-bold text-slate-600">#2026-042</span>
+                </div>
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-zinc-800 pb-1">
+                    <label class="text-[10px] font-black text-slate-400 uppercase">Ponedoras Inicial:</label>
+                    <input type="number" class="text-right font-bold focus:outline-none w-20 bg-transparent" value="1200">
+                </div>
+                <div class="flex items-center justify-between">
+                    <label class="text-[10px] font-black text-slate-400 uppercase">% Uniformidad:</label>
+                    <div class="flex items-center gap-1">
+                        <input type="number" class="text-right font-bold focus:outline-none w-12 bg-transparent" placeholder="85">
+                        <span class="text-[10px] font-bold">%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 space-y-3">
+                <p class="text-[10px] font-black text-primary uppercase mb-2">Periodo de Registro</p>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] font-bold text-slate-400 w-8">DEL:</span>
+                        <input type="date" class="flex-1 text-xs font-bold bg-slate-100 dark:bg-zinc-800 rounded p-1 border-none focus:ring-1 focus:ring-primary">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] font-bold text-slate-400 w-8">AL:</span>
+                        <input type="date" class="flex-1 text-xs font-bold bg-slate-100 dark:bg-zinc-800 rounded p-1 border-none focus:ring-1 focus:ring-primary">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+            <div class="flex items-center gap-2 mb-6">
+                <span class="material-icons text-primary">edit_note</span>
+                <h3 class="text-lg font-bold text-primary-dark dark:text-primary">Entrada de Recolección</h3>
+            </div>
+
+            <div class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <button type="button" onclick="openModal('Mañana')" class="flex items-center justify-between p-4 bg-white dark:bg-zinc-800 border-2 border-dashed border-slate-200 dark:border-zinc-700 rounded-xl hover:border-primary transition-all group">
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons text-slate-300 group-hover:text-primary">wb_sunny</span>
+                            <span class="font-bold">Jornada Mañana</span>
+                        </div>
+                        <span id="check-Mañana" class="material-icons text-slate-200">check_circle</span>
+                    </button>
+                    </div>
+
+                <div class="space-y-4">
+                    <p class="text-xs font-black text-primary uppercase tracking-widest">Estado de Huevos (Unidades)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-50 dark:bg-zinc-800 p-4 rounded-2xl border border-slate-100 dark:border-zinc-700">
+                            <label class="text-[10px] font-bold text-slate-400 uppercase">Buenos (B)</label>
+                            <input type="number" placeholder="0" class="w-full bg-transparent border-none text-2xl font-black p-0 focus:ring-0">
+                        </div>
+                        <div class="bg-slate-50 dark:bg-zinc-800 p-4 rounded-2xl border border-slate-100 dark:border-zinc-700">
+                            <label class="text-[10px] font-bold text-orange-400 uppercase">Rotos / Sucios (R)</label>
+                            <input type="number" placeholder="0" class="w-full bg-transparent border-none text-2xl font-black p-0 focus:ring-0 text-orange-500">
+                        </div>
+                        <div class="bg-slate-50 dark:bg-zinc-800 p-4 rounded-2xl border border-slate-100 dark:border-zinc-700 text-red-500">
+                            <label class="text-[10px] font-bold text-red-400 uppercase">Descarte (D)</label>
+                            <input type="number" placeholder="0" class="w-full bg-transparent border-none text-2xl font-black p-0 focus:ring-0 text-red-500">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg transition-all">
+                    <span class="material-icons">save</span> Finalizar Registro Diario
+                </button>
+            </div>
+        </div>
+    </main>
+
+    </body>
+</html>
